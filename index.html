@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Carrier Referral Campaign Newsletter</title>
+    <!-- Importing a modern font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to the external CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Minimalistic Accordion for Edit Controls (Bottom Left) -->
+    <div id="editAccordion">
+      <div id="accordionHeader">+</div>
+      <div id="editContainer">
+        <button id="editToggle">Edit</button>
+        <button id="saveChanges">Save</button>
+      </div>
+    </div>
+
+    <!-- Header Section with Logo -->
+    <header>
+      <div class="logoWrapper">
+        <img
+          src="https://images.carriercms.com/image/upload/w_175/v1629825291/common/logos-svg/carrier-logo.svg"
+          alt="Carrier Logo"
+        />
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Toggle Button -->
+    <button id="navToggle">Menu</button>
+
+    <!-- Navigation Bar with Links and Location Selector -->
+    <nav class="navigationBar">
+      <a href="https://example.com/hvac" data-key="navHVAC" rel="noopener noreferrer" title="Carrier HVAC News"
+        >HVAC</a
+      >
+      <a
+        href="https://example.com/refrigeration"
+        data-key="navRefrigeration"
+        rel="noopener noreferrer"
+        title="Carrier Refrigeration News"
+        >Refrigeration</a
+      >
+      <a
+        href="https://example.com/fire-security"
+        data-key="navFireSecurity"
+        rel="noopener noreferrer"
+        title="Carrier Fire & Security News"
+        >Fire &amp; Security</a
+      >
+      <a
+        href="https://example.com/financial"
+        data-key="navFinancial"
+        rel="noopener noreferrer"
+        title="Carrier Financial News"
+        >Financial Peers</a
+      >
+      <a
+        href="https://example.com/economic"
+        data-key="navEconomicNews"
+        rel="noopener noreferrer"
+        title="Carrier Economic News"
+        >Economic News</a
+      >
+
+      <!-- Location Selector with language names in their respective language -->
+      <div class="loc-selector">
+        <label for="location">Location:</label>
+        <select id="location">
+          <option value="BE" selected>Belgium – Nederlands</option>
+          <option value="BE-FR">Belgium – Français</option>
+          <option value="NL">Nederland – Nederlands</option>
+          <option value="FR">France – Français</option>
+          <option value="DE">Germany – Deutsch</option>
+          <option value="ES">Spain – Español</option>
+          <option value="UK">United Kingdom – English</option>
+        </select>
+      </div>
+    </nav>
+
+    <!-- Main Newsletter Wrapper -->
+    <main class="newsletterWrapper">
+      <!-- Newsletter Header -->
+      <div class="newsletterHeader">
+        <h1 id="mainTitle" class="editable" contenteditable="false"></h1>
+        <h2 id="campaignSubTitle" class="editable" contenteditable="false"></h2>
+      </div>
+
+      <!-- Referral Section -->
+      <section class="referralContainer">
+        <div class="imageRow">
+          <div class="imgContainer">
+            <img
+              src="https://images.carriercms.com/image/upload/w_500,h_400,c_fill,g_center,q_auto,f_auto/v1649170787/carrier/commercial-hvac-europe/service/carrier-bluedge-service-technician-on-site_sq.jpg"
+              id="image1"
+              alt="Technician On Site"
+            />
+            <div class="overlay editable" id="overlayImage1" contenteditable="false">Learn</div>
+          </div>
+          <div class="imgContainer">
+            <img
+              src="https://images.carriercms.com/image/upload/w_500,h_400,c_fill,g_center,q_auto,f_auto/v1648732922/carrier/commercial-hvac-europe/service/carrier-bluedge-service-technician-maintenance_sq.jpg"
+              id="image2"
+              alt="Technician Maintenance"
+            />
+            <div class="overlay editable" id="overlayImage2" contenteditable="false">Earn</div>
+          </div>
+          <div class="imgContainer">
+            <img
+              src="https://images.carriercms.com/image/upload/v1707516173/carrier/commercial-hvac-europe/news-releases/uk/carrier-bluedge-technician.jpg"
+              id="image3"
+              alt="Technician"
+            />
+            <div class="overlay editable" id="overlayImage3" contenteditable="false">Certify</div>
+          </div>
+        </div>
+        <div class="contentBox">
+          <div class="sectionHeader">
+            <div class="circleIndicator"></div>
+            <h3 id="referralHeading" class="editable" contenteditable="false"></h3>
+          </div>
+          <p id="referralParagraph" class="editable" contenteditable="false"></p>
+          <div class="ctaWrapper">
+            <!-- Referral CTA triggers the job modal -->
+            <a href="#" class="btn editable" id="referralCTA" contenteditable="false"></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Apprenticeship Section -->
+      <section class="apprenticeshipContainer">
+        <div class="dualContent">
+          <div class="contentBox apprenticeshipBox">
+            <div class="sectionHeader">
+              <div class="circleIndicator"></div>
+              <h3 id="apprenticeshipHeading" class="editable" contenteditable="false"></h3>
+            </div>
+            <p id="apprenticeshipParagraph" class="editable" contenteditable="false"></p>
+            <div class="ctaWrapper">
+              <a href="#" class="btn editable" id="apprenticeshipCTA" contenteditable="false"></a>
+            </div>
+          </div>
+          <div class="enhancedBonusSection">
+            <h3 id="enhancedBonusHeading" class="editable" contenteditable="false"></h3>
+            <p class="bonusAmount editable" id="enhancedBonusAmount" contenteditable="false"></p>
+            <p id="enhancedBonusParagraph" class="editable" contenteditable="false"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Decorative Corner Image -->
+      <div class="decorativeCornerImage">
+        <img
+          src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/2ey3f6mh/rb2/k0z/fsc/Remove%20background%20project.png"
+          id="decorativeImage"
+          alt="Decorative Corner Image"
+        />
+      </div>
+    </main>
+
+    <!-- Job Modal Popup -->
+    <div id="jobModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="jobModalClose">&times;</span>
+        <p id="jobModalInstructions"></p>
+        <div id="jobOptions">
+          <h2>Job Options</h2>
+          <ul>
+            <li>
+              <a href="#" data-job-url="" class="job-option">View Vacancy</a>
+            </li>
+          </ul>
+        </div>
+        <div id="jobIframeContainer" style="display: none;">
+          <iframe id="jobIframe" src=""></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single Footer with Rounded Top Blue Line -->
+    <footer>
+      <div class="social-media">
+        <a href="https://www.facebook.com/carrier" target="_blank" class="social-icon facebook">f</a>
+        <a href="https://twitter.com/carrier" target="_blank" class="social-icon twitter">t</a>
+        <a href="https://www.linkedin.com/company/carrier" target="_blank" class="social-icon linkedin">in</a>
+        <a href="https://www.youtube.com/user/Carrier" target="_blank" class="social-icon youtube">yt</a>
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2025 Carrier. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Link to external JS (must be below the HTML content so elements exist) -->
+    <script src="script.js"></script>
+  </body>
+</html>
